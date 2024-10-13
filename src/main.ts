@@ -1,9 +1,13 @@
-import { Contact } from "./Entities/Contact";
-import { PersonalContact } from "./Entities/PersonalContact";
-import { ProfessionalContact } from "./Entities/ProfessionalContact";
+// import { Contact } from "./Entities/Contact";
+// import { PersonalContact } from "./Entities/PersonalContact";
+// import { ProfessionalContact } from "./Entities/ProfessionalContact";
+// import { promptServiceString, promptServiceDate } from "./services/promptServices";
 import { createContact } from "./services/createContact";
+import { deleteContact } from "./services/deleteContact";
 import { editContact } from "./services/editContact";
-import { promptServiceString, promptServiceDate, promptServiceNumber } from "./services/promptServices";
+import { getContacts } from "./services/getContacts";
+import { promptServiceNumber } from "./services/promptServices";
+import { searchContact } from "./services/searchContact";
 
 // ========== Quemando datos ===================================
 
@@ -68,34 +72,39 @@ let opc: number = 0;
 do {
     opc = promptServiceNumber(`Ingrese una opcion: 
         0. Salir 
-        1. Ver contactos 
-        2. Crear contacto 
-        3. Editar Contacto 
-        4. Borrar Contacto`);
+        1. Ver contactos
+        2. Buscar contacto 
+        3. Crear contacto 
+        4. Editar Contacto 
+        5. Borrar Contacto`);
 
     switch (opc) {
         case 0:
             break;
 
         case 1:
-            alert('Implementando Ver contactos');
+            getContacts();
             break;
 
         case 2:
-            createContact();
+            searchContact();
             break;
 
         case 3:
-            editContact();
+            createContact();
             break;
 
         case 4:
-            alert('Implementando Borrar contacto');
+            editContact();
+            break;
+
+        case 5:
+            deleteContact();
             break;
 
         default:
             alert('Opcion no valida');
-            break;0
+            break; 0
     }
 
 } while (opc !== 0);

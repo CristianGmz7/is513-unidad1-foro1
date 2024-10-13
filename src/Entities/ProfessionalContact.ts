@@ -20,5 +20,6 @@ export class ProfessionalContact extends Contact implements IProfessionalContact
     displayInfo(): void {
         super.displayInfo();
         console.log(`Profesion: ${this.jobTitle}`);
+        console.log('-----------------------------------------------------');
     }
 }

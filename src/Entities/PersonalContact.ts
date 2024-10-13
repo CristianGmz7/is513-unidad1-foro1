@@ -21,6 +21,8 @@ export class PersonalContact extends Contact implements IPersonalContact  {
     displayInfo(): void {
         super.displayInfo();
         console.log(`Cumpleaños: ${this.birthday}`);
+        console.log('-----------------------------------------------------');
+        
     }
 
 

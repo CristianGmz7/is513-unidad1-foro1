@@ -1,13 +1,13 @@
 import { Contact } from "../Entities/Contact";
 import { PersonalContact } from "../Entities/PersonalContact";
 import { ProfessionalContact } from "../Entities/ProfessionalContact";
-import { getSavedContactsFromLSEditContact, setContactsToLS } from "./localStorage";
+import { getSavedContactsFromLSForServices, setContactsToLS } from "./localStorage";
 import { promptServiceString, promptServiceNumber, promptServiceDate } from "./promptServices";
 
 export const editContact = (): void => {
 
     let idContactToEdit: number;
-    let contactsFromLS: Contact[] = getSavedContactsFromLSEditContact();  //objetos Contact
+    let contactsFromLS: Contact[] = getSavedContactsFromLSForServices();  //objetos Contact
 
     idContactToEdit = promptServiceNumber("Ingrese el id del contacto que quiere editar");
 
@@ -35,6 +35,7 @@ export const editContact = (): void => {
         }
 
         setContactsToLS(contactsFromLS);
+        alert('Contacto editado satisfactoriamente')
 
     }
     else{

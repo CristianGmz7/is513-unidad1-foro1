@@ -25,8 +25,8 @@ export const setContactsToLS = (contacts: Contact[]): void => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
 }
 
-//se utiliza en el servicio editContact
-export const getSavedContactsFromLSEditContact = (): Contact[] => {
+//se utiliza en los servicios del CRUD
+export const getSavedContactsFromLSForServices = (): Contact[] => {
 
     const contactsJson: string | null = localStorage.getItem("contacts");
 

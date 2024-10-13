@@ -52,8 +52,8 @@ export class Contact implements IContact {
     }
 
     displayInfo(): void {
-        console.log(`Nombre: ${this.name}, Telefono: ${this.phone}, Email: ${this.email}`);
         console.log(`Tipo de contacto: ${this.contactType}`);
+        console.log(`Nombre: ${this.name}, Telefono: ${this.phone}, Email: ${this.email}`);
         
     }
 
