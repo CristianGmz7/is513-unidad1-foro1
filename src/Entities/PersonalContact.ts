@@ -13,7 +13,6 @@ export class PersonalContact extends Contact implements IPersonalContact  {
     getBirthday(): Date {
         return this.birthday
     }
-
     setBirthday(birthday: Date): void {
         this.birthday = birthday
     }

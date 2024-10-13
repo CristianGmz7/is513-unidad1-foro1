@@ -45,7 +45,7 @@ export const createContact = (): void => {
                 setContactToLS(contactPr);
                 setLastIdNumber(contactPr.getId());
 
-                alert('Contacto Personal creado satisfactoriamente');
+                alert('Contacto Profesional creado satisfactoriamente');
 
                 return;
 

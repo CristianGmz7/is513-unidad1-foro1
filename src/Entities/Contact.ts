@@ -34,23 +34,18 @@ export class Contact implements IContact {
     getEmail(): string {
         return this.email;
     }
-    
     setContactType(contactType: string): void {
         this.contactType = contactType
     }
-
     getContactType(): string {
         return this.contactType
     }
-
     setId(id: number): void {
         this.id = id;
     }
-
     getId(): number {
         return this.id;
     }
-
     displayInfo(): void {
         console.log(`Tipo de contacto: ${this.contactType}`);
         console.log(`Nombre: ${this.name}, Telefono: ${this.phone}, Email: ${this.email}`);

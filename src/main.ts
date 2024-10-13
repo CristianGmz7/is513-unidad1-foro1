@@ -67,10 +67,11 @@ import { searchContact } from "./services/searchContact";
 
 // =============== Menu selección de agenda de contactos ====================
 
-let opc: number = 0;
+export const mainMenu = (): void => {
+    let opc: number = 0;
 
-do {
-    opc = promptServiceNumber(`Ingrese una opcion: 
+    do {
+        opc = promptServiceNumber(`Ingrese una opcion: 
         0. Salir 
         1. Ver contactos
         2. Buscar contacto 
@@ -78,33 +79,34 @@ do {
         4. Editar Contacto 
         5. Borrar Contacto`);
 
-    switch (opc) {
-        case 0:
-            break;
+        switch (opc) {
+            case 0:
+                break;
 
-        case 1:
-            getContacts();
-            break;
+            case 1:
+                getContacts();
+                break;
 
-        case 2:
-            searchContact();
-            break;
+            case 2:
+                searchContact();
+                break;
 
-        case 3:
-            createContact();
-            break;
+            case 3:
+                createContact();
+                break;
 
-        case 4:
-            editContact();
-            break;
+            case 4:
+                editContact();
+                break;
 
-        case 5:
-            deleteContact();
-            break;
+            case 5:
+                deleteContact();
+                break;
 
-        default:
-            alert('Opcion no valida');
-            break; 0
-    }
+            default:
+                alert('Opcion no valida');
+                break; 0
+        }
 
-} while (opc !== 0);
+    } while (opc !== 0);
+}
